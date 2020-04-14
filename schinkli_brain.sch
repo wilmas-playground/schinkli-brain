@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x03 Q2
+U 1 1 5E7F8E39
+P 4200 4400
+F 0 "Q2" H 4280 4442 50  0000 L CNN
+F 1 "WE-FDSM3.3" H 4280 4351 50  0000 L CNN
+F 2 "Converter_DCDC:Converter_DCDC_RECOM_R-78E-0.5_THT" H 4200 4400 50  0001 C CNN
+F 3 "~" H 4200 4400 50  0001 C CNN
+	1    4200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 5E7F9C47
+P 2650 4650
+F 0 "#PWR0102" H 2650 4500 50  0001 C CNN
+F 1 "VCC" H 2667 4823 50  0000 C CNN
+F 2 "" H 2650 4650 50  0001 C CNN
+F 3 "" H 2650 4650 50  0001 C CNN
+	1    2650 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3_1
+U 1 1 5E92CD7B
+P 2650 2950
+F 0 "J3_1" H 2730 2942 50  0000 L CNN
+F 1 "VMOT" H 2730 2851 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x02_P5.08mm_Drill1.5mm" H 2650 2950 50  0001 C CNN
+F 3 "~" H 2650 2950 50  0001 C CNN
+	1    2650 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E9384CD
+P 2750 3350
+F 0 "#PWR0105" H 2750 3100 50  0001 C CNN
+F 1 "GND" H 2755 3177 50  0000 C CNN
+F 2 "" H 2750 3350 50  0001 C CNN
+F 3 "" H 2750 3350 50  0001 C CNN
+	1    2750 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 3150 2750 3350
+$Comp
+L power:GND #PWR0107
+U 1 1 5E93CF5D
+P 3150 4650
+F 0 "#PWR0107" H 3150 4400 50  0001 C CNN
+F 1 "GND" H 3155 4477 50  0000 C CNN
+F 2 "" H 3150 4650 50  0001 C CNN
+F 3 "" H 3150 4650 50  0001 C CNN
+	1    3150 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4300 2650 4300
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 5E93F02C
+P 3650 4650
+F 0 "#PWR0108" H 3650 4500 50  0001 C CNN
+F 1 "+3V3" H 3665 4823 50  0000 C CNN
+F 2 "" H 3650 4650 50  0001 C CNN
+F 3 "" H 3650 4650 50  0001 C CNN
+	1    3650 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR0109
+U 1 1 5E941D51
+P 5800 4200
+F 0 "#PWR0109" H 5800 4050 50  0001 C CNN
+F 1 "+3V3" H 5815 4373 50  0000 C CNN
+F 2 "" H 5800 4200 50  0001 C CNN
+F 3 "" H 5800 4200 50  0001 C CNN
+	1    5800 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L ESP:ESP-12E U1
+U 1 1 5E91B1E8
+P 6850 3600
+F 0 "U1" H 6850 4365 50  0000 C CNN
+F 1 "ESP-12E" H 6850 4274 50  0000 C CNN
+F 2 "ESP:ESP-12E" H 6850 3600 50  0001 C CNN
+F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all/" H 6850 3600 50  0001 C CNN
+	1    6850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5E94E039
+P 7850 4200
+F 0 "#PWR0112" H 7850 3950 50  0001 C CNN
+F 1 "GND" H 7855 4027 50  0000 C CNN
+F 2 "" H 7850 4200 50  0001 C CNN
+F 3 "" H 7850 4200 50  0001 C CNN
+	1    7850 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4000 5800 4000
+Wire Wire Line
+	5800 4000 5800 4200
+Wire Wire Line
+	7750 4000 7850 4000
+Wire Wire Line
+	7850 4000 7850 4200
+Text GLabel 8100 3800 2    50   Input ~ 0
+DP1
+Wire Wire Line
+	7750 3800 8100 3800
+Wire Wire Line
+	3150 4650 3150 4400
+Wire Wire Line
+	3150 4400 4000 4400
+Wire Wire Line
+	2650 4300 2650 4650
+Wire Wire Line
+	3650 4650 3650 4500
+Wire Wire Line
+	3650 4500 4000 4500
+Connection ~ 2650 4300
+Text Notes 1100 2200 0    157  ~ 0
+Power Distribution
+Text Notes 5700 2200 0    157  ~ 0
+MCU
+$Comp
+L Connector_Generic:Conn_01x06 J4
+U 1 1 5E91ED64
+P 9550 2900
+F 0 "J4" V 9514 2512 50  0000 R CNN
+F 1 "BridgeHeader" V 9423 2512 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9550 2900 50  0001 C CNN
+F 3 "~" H 9550 2900 50  0001 C CNN
+	1    9550 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 5E91FA66
+P 9350 3200
+F 0 "#PWR0110" H 9350 3050 50  0001 C CNN
+F 1 "VCC" H 9367 3373 50  0000 C CNN
+F 2 "" H 9350 3200 50  0001 C CNN
+F 3 "" H 9350 3200 50  0001 C CNN
+	1    9350 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5E922005
+P 9450 3450
+F 0 "#PWR0111" H 9450 3200 50  0001 C CNN
+F 1 "GND" H 9455 3277 50  0000 C CNN
+F 2 "" H 9450 3450 50  0001 C CNN
+F 3 "" H 9450 3450 50  0001 C CNN
+	1    9450 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 8100 3700 2    50   Input ~ 0
+DP2
+Text GLabel 8100 3500 2    50   Input ~ 0
+DP4
+Text GLabel 9550 3800 3    50   Input ~ 0
+DP1
+Text GLabel 9650 3800 3    50   Input ~ 0
+DP2
+Text GLabel 8100 3600 2    50   Input ~ 0
+DP3
+Text GLabel 9750 3800 3    50   Input ~ 0
+DP3
+Text GLabel 9850 3800 3    50   Input ~ 0
+DP4
+Wire Wire Line
+	7750 3700 8100 3700
+Wire Wire Line
+	7750 3600 8100 3600
+Wire Wire Line
+	7750 3500 8100 3500
+Wire Wire Line
+	9350 3200 9350 3100
+Wire Wire Line
+	9450 3450 9450 3100
+Wire Wire Line
+	9550 3800 9550 3100
+Wire Wire Line
+	9650 3800 9650 3100
+Wire Wire Line
+	9750 3800 9750 3100
+Wire Wire Line
+	9850 3800 9850 3100
+Text Notes 9050 2200 0    157  ~ 0
+Bridge
+Wire Wire Line
+	2650 3150 2650 4300
+$EndSCHEMATC
