@@ -6,10 +6,9 @@ board and shields for it.
 
 ## schinkli brain
 
-The controller board is named _schinkli brain_ and consists the footplint for an ESP12E, a voltage regulator and the pin header for attaching shields.
+The controller board is named _schinkli brain_ and contains the footprint for an ESP12E, a voltage regulator and the pin header for attaching shields.
 
-![pcb front](/doc/brain-front.JPG)
-![pcb front](/doc/brain-back.JPG)
+![pcb](/doc/brain_3d.png)
 
 ## Project URLs
 
